@@ -1,4 +1,4 @@
-package com.example.main;
+package com.vesarium.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

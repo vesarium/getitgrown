@@ -1,4 +1,4 @@
-package com.example.main;
+package com.vesarium.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
