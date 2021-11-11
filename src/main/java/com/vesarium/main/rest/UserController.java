@@ -1,6 +1,8 @@
 package com.vesarium.main.rest;
 
 import com.vesarium.main.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,10 +14,10 @@ public class UserController {
 	private List<User> users = new ArrayList<>();
 
 	@PostMapping("/create")
-	public User createUser(@RequestBody User newUser){
+	public ResponseEntity<User> createUser(@RequestBody User newUser){
 		this.users.add(newUser);
-
-		return this.users.get(this.users.size()-1);
+		User responseBody = this.users.get(this.users.size()-1);
+		return new ResponseEntity<>(responseBody, HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getUsers")
@@ -23,7 +25,7 @@ public class UserController {
 		return this.users;
 	}
 
-	@GetMapping("/getUser")
+	@GetMapping("/getUser/{id}")
 	public User getUser(@PathVariable Integer id){
 		return this.users.get(id);
 	}
