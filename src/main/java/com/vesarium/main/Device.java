@@ -8,6 +8,15 @@ public class Device {
     private Integer id;
     private String type;
     private String name;
+    private Integer serial;
+
+    public Integer getSerial() {
+        return serial;
+    }
+
+    public void setSerial(Integer serial) {
+        this.serial = serial;
+    }
 
     public String getType() {
         return type;
