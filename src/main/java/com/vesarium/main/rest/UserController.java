@@ -11,10 +11,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 @RestController
-
+@RequestMapping("/user")
 public class UserController {
 
-	private List<User> users = new ArrayList<>();
 	private UserService service;
 
 	@Autowired
@@ -25,19 +24,17 @@ public class UserController {
 
 	@PostMapping("/create")
 	public User createUser(@RequestBody User newUser){
-		this.users.add(newUser);
-
-		return this.users.get(this.users.size()-1);
+		return this.service.createUser(newUser);
 	}
 
 	@GetMapping("/getUsers")
 	public List<User> getUsers(){
-		return this.users;
+		return this.service.getUsers();
 	}
 
 	@GetMapping("/getUser")
 	public User getUser(@PathVariable Integer id){
-		return this.users.get(id);
+		return this.service.getUser(id);
 	}
 
 	@DeleteMapping("removeUser/{id}")

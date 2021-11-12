@@ -1,6 +1,7 @@
 package com.vesarium.main.service;
 
 import com.vesarium.main.User;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
