@@ -7,14 +7,13 @@ I was'n expecting that I will spend less time
 
 **What went well? / What didn't go as planned?**
 The start of project wasn't so smooth. When all issues were solved everything went forward quite fast.
+Unfortunately not used full functionality for Jira Board. 
 
 **Possible improvements for future revisions of the project**
 
 
 
 [Link to Jira Board](https://daniil-murashev.atlassian.net/jira/software/projects/GB/boards/2)
-
-
 
 
 
