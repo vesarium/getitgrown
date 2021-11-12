@@ -6,56 +6,56 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
 import com.vesarium.main.User;
+import com.vesarium.main.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PuppyServiceDB implements UserService {
+public class UserServiceDB implements UserService {
 
     private UserRepository repository;
 
-    public PuppyServiceDB(UserRepository repository) {
+    public UserServiceDB(UserRepository repository) {
         super();
         this.repository = repository;
     }
 
     @Override
-    public User createPuppy(User newUser) {
+    public User createUser(User newUser) {
         return this.repository.save(newUser);
     }
 
     @Override
-    public List<Puppy> getPuppies() {
-        return this.repo.findAll();
+    public List<User> getUsers() {
+        return this.repository.findAll();
     }
 
     @Override
-    public Puppy getPuppy(Integer id) {
-//		return this.repo.findById(id).orElseThrow(() -> new EntityNotFoundException("No puppy found with id: " + id));
-        Optional<Puppy> puppyOptional = this.repo.findById(id);
+    public User getUser(Integer id) {
+       Optional<User> userOptional = this.repository.findById(id);
 
-        if (puppyOptional.isPresent()) {
-            Puppy puppy = puppyOptional.get();
-            return puppy;
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return user;
         } else {
-            throw new EntityNotFoundException("No puppy found with id: " + id);
+            throw new EntityNotFoundException("No user found with id: " + id);
         }
     }
 
     @Override
-    public Puppy replacePuppy(Integer id, Puppy newPuppy) {
-        Puppy existing = this.getPuppy(id);
+    public User updateUser(Integer id, User newUser) {
+        User existing = this.getUser(id);
 
-        existing.setBreed(newPuppy.getBreed());
-        existing.setHeight(newPuppy.getHeight());
-        existing.setName(newPuppy.getName());
+        existing.setName(newUser.getName());
+        existing.setEmail(newUser.getEmail());
+        existing.setInfo(newUser.getInfo());
 
-        return this.repo.save(existing);
+        return this.repository.save(existing);
     }
 
     @Override
-    public boolean removePuppy(Integer id) {
-        this.repo.deleteById(id);
-        return !this.repo.existsById(id);
+    public boolean removeUser(Integer id) {
+        this.repository.deleteById(id);
+        return !this.repository.existsById(id);
     }
 
 }
