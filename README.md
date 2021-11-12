@@ -1,21 +1,20 @@
 
 ### **Why are we doing this?**
-This project
+This project is to demonstrate what knowledges I got within Java Spring course. It helps to dive into backend development with JAVA. 
 
-**How I expected the challenge to go**
+### **How I expected the challenge to go**
 I was'n expecting that I will spend less time
 
-**What went well? / What didn't go as planned?**
+### **What went well? / What didn't go as planned?**
 The start of project wasn't so smooth. When all issues were solved everything went forward quite fast.
 Unfortunately not used full functionality for Jira Board. 
 
-**Possible improvements for future revisions of the project**
+### **Possible improvements for future revisions of the project**
+I want to create a backend for my own project, so I will proceed with development. 
 
 
 
 [Link to Jira Board](https://daniil-murashev.atlassian.net/jira/software/projects/GB/boards/2)
-
-
 
 ### Screenshots:
 
