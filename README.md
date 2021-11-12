@@ -8,6 +8,7 @@ How I expected the challenge to go. What went well? / What didn't go as planned?
 
 
 ###Screenshots:
+
 ![screen1](/assets/images/screen1.png)
 ![screen2](/assets/images/screen2.png)
 ![screen3](/assets/images/screen3.png)
