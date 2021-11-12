@@ -15,13 +15,6 @@ public class User {
 		super();
 	}
 
-	public User(String name, String email, String info) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.info = info;
-	}
-
 	public String getName() {
 		return name;
 	}
