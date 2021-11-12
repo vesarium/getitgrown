@@ -6,11 +6,15 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
 import com.vesarium.main.User;
+import com.vesarium.main.UserDevices;
+import com.vesarium.main.repository.UserDevicesRepository;
 import com.vesarium.main.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceDB implements UserService {
+
+
 
     private UserRepository repository;
 
@@ -57,5 +61,7 @@ public class UserServiceDB implements UserService {
         this.repository.deleteById(id);
         return !this.repository.existsById(id);
     }
+
+
 
 }
