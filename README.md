@@ -15,7 +15,7 @@ I want to create a backend for my own project, so I will proceed with developmen
 
 [Link to Jira Board](https://daniil-murashev.atlassian.net/jira/software/projects/GB/boards/2)
 
-### Screenshots:
+### Screenshots: 
 
 ![screen1](/assets/images/screen1.png)
 ![screen2](/assets/images/screen2.png)
