@@ -8,10 +8,7 @@ public class GetitgrownApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GetitgrownApplication.class, args);
-		
-		//User iamuser = new User();
-		
-		
+
 	}
 
 }
