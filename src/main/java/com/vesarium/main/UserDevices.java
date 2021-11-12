@@ -8,6 +8,8 @@ public class UserDevices {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private Integer userid;
+    private Integer deviceid;
 
     public Integer getUserid() {
         return userid;
@@ -17,8 +19,7 @@ public class UserDevices {
         this.userid = userid;
     }
 
-    private Integer userid;
-    private Integer deviceid;
+
 
     public UserDevices() {
         super();

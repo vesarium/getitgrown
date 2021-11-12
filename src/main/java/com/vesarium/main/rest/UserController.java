@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
@@ -61,8 +61,20 @@ public class UserController {
 		return this.userDevicesService.addDevice(newDevice);
 	}
 
+	@GetMapping("/getDevices/{id}")
+	public List<UserDevices> getUserDevices(@PathVariable Integer id){
+		return this.userDevicesService.getUserDevices(id);
+	}
 
-
+	@DeleteMapping("removeDevice/{id}")
+	public ResponseEntity<?> removeDevice(@PathVariable Integer id){
+		boolean removed = this.userDevicesService.removeUserDevice(id);
+		if(removed){
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		} else {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 
 
 }
